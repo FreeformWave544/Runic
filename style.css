@@ -1,0 +1,16 @@
+.block {
+    height: 200px;
+    width: 500px;
+    border-radius: 50px;
+    background-color: #171717;
+    color: white;
+    padding: 25px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.block h1 {
+    font-size: 28px;
+    margin: 0;
+}
