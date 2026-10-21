@@ -7,21 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav aria-label="Slide Navigation" style="display: flex; justify-content: center; gap: 50px;">
+    <nav aria-label="Slide Navigation" class="navigation">
         <button class="nav-btn active" onclick="showPage('1')">Home</button>
         <button class="nav-btn" onclick="showPage('2')">About</button>
-        <button class="nav-btn" onclick="showPage('3')">Services</button>
+        <button class="nav-btn" onclick="showPage('3')">Events</button>
     </nav><br /><br />
-    <div style="display: flex; justify-content: center; gap: 50px;">
-        <div class="block">
-            <h1>Runic<span style="--tw-text-opacity: 1; color: rgb(239 68 68 / var(--tw-text-opacity, 1));">Events</span></h1>
-            It's the best place for the best events!
+    <div class="page-container">
+        <div id="page-1" class="page">
+            <div class="block">
+                <h1>Runic<span style="--tw-text-opacity: 1; color: rgb(239 68 68 / var(--tw-text-opacity, 1));">Events</span></h1>
+                It's the best place for the best events!
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92TuCdsutLvXhCYC058qpcvW6EVad7ail_9i--GPYyGV4-ZF3Mi9OVAo&s=10">
+            <div class="block">
+                <h1>Runic<span style="--tw-text-opacity: 1; color: rgb(239 68 68 / var(--tw-text-opacity, 1));">Shadows</span></h1>
+                The amazing owner of this amazing server!
+                "If you are always trying to be normal, you will never know how amazing you can be."
+            </div>
         </div>
-        <div class="block">
-            <h1>Runic<span style="--tw-text-opacity: 1; color: rgb(239 68 68 / var(--tw-text-opacity, 1));">Shadows</span></h1>
-            The amazing owner of this amazing server!
-            "If you are always trying to be normal, you will never know how amazing you can be."
+        <div id="page-2" class="page" hidden>
+            <div class="block" style="height: 500px;">
+                <h1>Our <span style="--tw-text-opacity: 1; color: rgb(239 68 68 / var(--tw-text-opacity, 1));">Team</span></h1>
+                <p>Developers:<br />
+                FreeformWave ;3</p>
+                <div style="display: inline; position: relative;">
+                    <img src="https://rawr.hackclub.com/dinosaur_waving.png" width="50px">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Crown_of_England_Old.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" width="50px" style="position: absolute; bottom: 50; right: 0;">
+                </div>
+                <p>Other person</p>
+                <div style="display: inline; position: relative;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/476f16f4-aa94-4137-ad6c-e7b6c29222e9/dhjfrtg-50082b47-2d11-4438-818e-70b0e7c674e1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi80NzZmMTZmNC1hYTk0LTQxMzctYWQ2Yy1lN2I2YzI5MjIyZTkvZGhqZnJ0Zy01MDA4MmI0Ny0yZDExLTQ0MzgtODE4ZS03MGIwZTdjNjc0ZTEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.PeCCSLjtiI1YHMiMxJsCjIFUQzVrNIBBe3bR6I8j_p4" width="150px" style="right: 50;">
+                    <img src="https://freepngimg.com/thumb/sunglasses/25303-8-sunglasses-photos.png" width="50px" style="position: absolute; bottom: 50; right: 110px;">
+                </div>
+            </div>
+        </div>
+        <div id="page-3" class="page" hidden>
+            <div class="block" style="height: 500px;">
+                <h1>Our <span style="color: #ef4444;">Events</span></h1>
+                <p>Explore our events here!</p>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f2a5d3f-eeeb-48ec-bfe5-6735566025c0/dm5w3oy-831dd0c9-3a3e-4d29-a06c-667027a53527.jpg/v1/fill/w_1100,h_727,q_70,strp/dilophosaurus_for_pride_month_2026_by_makairodonx_dm5w3oy-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU5MSIsInBhdGgiOiIvZi84ZjJhNWQzZi1lZWViLTQ4ZWMtYmZlNS02NzM1NTY2MDI1YzAvZG01dzNveS04MzFkZDBjOS0zYTNlLTRkMjktYTA2Yy02NjcwMjdhNTM1MjcuanBnIiwid2lkdGgiOiI8PTI0MDcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2NVHwnB9i_AMGcMljr0rIem3NdUEZntgdipM2wb2xS4" width="400px">
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

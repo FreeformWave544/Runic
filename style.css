@@ -14,3 +14,92 @@
     font-size: 28px;
     margin: 0;
 }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-btn.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-btn:hover {
+    color: #003a79;
+    border-bottom-color: #003a79;
+}
+
+.page-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page[hidden] {
+    display: none !important;
+}
+
+.page.slide-left {
+    animation: slideLeft 0.4s ease both;
+}
+
+.page.slide-right {
+    animation: slideRight 0.4s ease both;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.page.in-right  { animation: inRight 0.4s ease both; }
+.page.in-left   { animation: inLeft 0.4s ease both; }
+.page.out-left  { animation: outLeft 0.4s ease both; }
+.page.out-right { animation: outRight 0.4s ease both; }
+
+@keyframes inRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes inLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes outLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes outRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
